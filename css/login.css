@@ -1,0 +1,43 @@
+.body {
+    font-family: Arial, sans-serif; /* Fuente del texto */
+    overflow: visible; /* Visibilidad de las barras de desplazamiento */
+}
+.boton-inicio {
+    /* Estilo del botón para ir al Inicio*/
+    position: absolute;
+    top: 15px;
+    right: 120px;
+    padding: 10px 20px;
+    background-color: #2ECC71;
+    color: black;
+}
+/* Estilo de la imagen de fondo*/
+.background {
+    /* Estilo de la imagen de fondo*/
+    position: absolute;
+    width: 50%; /* Tamaño de la imagen */
+    height: auto; /* Mantener las proporciones de la imagen */
+    top: 50%; /* Posicionar la imagen en el centro verticalmente */
+    left: 50%; /* Posicionar la imagen en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar la posición para que quede centrada */
+    opacity: 0.2; /* Brillo */
+    z-index: -1; /* Colocar la imagen en el fondo */
+}
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cobertura de toda la pantalla */
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Efecto transparente para observar el contenido del Login */
+    z-index: 9999; /* Superposición a todos los demás elementos */
+    display: none; /* Ocultar por dfecto, para que se utilice cuando sea invocado */
+}
+
+.spinner-border {
+    border-color: green; /* Cambiar el color del borde */
+    border-right-color: transparent; /* Hacer un lado transparente para el efecto de rotación */
+    width: 3rem;
+    height: 3rem;
+}

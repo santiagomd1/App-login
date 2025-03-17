@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* El contenido ocupa toda la altura de la ventana */
+    overflow: visible; /* Visibilidad de las barras de desplazamiento */
+}
+/* Estilo de la imagen de fondo*/
+.background {
+    position: absolute;
+    width: 50%; /* Ajusta este valor para controlar el tamaño de la imagen */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    top: 50%; /* Posiciona la imagen en el centro verticalmente */
+    left: 50%; /* Posiciona la imagen en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para que quede centrada */
+    opacity: 0.2; /* Ajusta el brillo */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+.content {
+    position: relative;
+    z-index: 1; /* Asegura que el texto esté encima de la imagen */
+    color: #000000; /* Ajusta el color del texto */
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #000;
+    box-shadow: 8px 3px 3px black;
+}
+.blue {
+    color: #0033A0; /* Color azul para el nombre del aplicativo */
+}

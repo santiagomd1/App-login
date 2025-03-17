@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title> <!--Nombre de la página -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Recurso de Bootstrapp (CSS) -->
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="PHP" src="../php/login.php" />
+
+</head>
+
+<body>
+    <!-- Spinner de carga -->
+    <div class="spinner-overlay justify-content-center align-items-center">
+        <div class="spinner-border text-danger" role="status">
+        </div>
+    </div>
+    </a>
+    <!-- Botón de Inicio -->
+    <a onclick="Inicio()" class="boton-inicio">Inicio <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            fill="currentColor" class="bi bi-house-check" viewBox="0 0 16 16">
+            <path
+                d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708z" />
+            <path
+                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514" />
+        </svg>
+    </a>
+    <!-- Div principal -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>Registro</h4>
+                    </div>
+                    <div class="text-center mt-3">
+                        <!-- Inserción de la imagen de diseño en el formulario -->
+                        <img src="../recursos/login.png" alt="Imagen registro" class="img-fluid"
+                            style="max-width: 150px; border-radius: 20%;">
+                    </div>
+                    <!-- Ingreso de los respectivos datos -->
+                    <div class="card-body">
+                        <!-- Formulario con evento onsubmit (para mostrar loading) -->
+                        <form action="../php/login.php" method="post" onsubmit="showSpinner()">
+                            <!-- Campo usuario (correo) -->
+                            <div class="form-group">
+                                <p>Ingrese su correo:</p>
+                                <input type="email" class="form-control" id="ucorreo" name="ucorreo" required>
+                            </div>
+                            <!-- Campo contraseña -->
+                            <div class="form-group">
+                                <label for="contrasena">Contraseña (mínimo 6 caracteres):</label>
+                                <input type="password" class="form-control" id="contrasena" name="contrasena"
+                                    minlength="6" required>
+                            </div>
+                            <!-- Botón para el envío de los datos del usuario -->
+                            <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Función para activar el spinner
+        function showSpinner() {
+            // Muestra el spinner solo al hacer clic en el botón "Iniciar sesión"
+            console.log('Spinner activado'); // Depuración
+            document.querySelector('.spinner-overlay').style.display = 'flex';
+        }
+        // Función para confirmar la acción del botón Inicio
+        function Inicio() {
+            if (confirm("¿Desea retornar al Inicio? No se realizará la Creación del usuario.")) {
+                window.location.href = "../index.html";
+                exit();
+            }
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Inclusión y ejecución de código de la biblioteca jQuery -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Adición y ejecución de código de la biblioteca JavaScript de BootStrap -->
+</body>
+</html>
